@@ -1,7 +1,7 @@
 # Find-Replace-Reorder-Words
 - [x] The goal of the project is providing a tool that would sort related sentences under each other
 
-## Instalation
+## Installation
 1. Clone the repository to your computer
 2. Add your text document to the resource folder
 3. Change the 25th line, to your file path
