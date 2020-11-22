@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -11,17 +12,12 @@ public class AccessProperty {
 
     public static void main(String[] args) {
         ArrayList<String> multipleKeyWords = new ArrayList<>();
-        ArrayList<String> keyWordLine = new ArrayList<>();
-        ArrayList<String> nonKeyWordLine = new ArrayList<>();
         Scanner input = new Scanner(System.in);
-        String keyWord = null;
-
+        String keyWord;
         System.out.print("Enter the words you are looking in the text - > ");
-        while(!(keyWord != null && keyWord.equals("exit"))){
-            keyWord = input.next();
+        while(!(keyWord = input.nextLine()).contains("exit")){
             multipleKeyWords.add(keyWord);
         }
-        multipleKeyWords.remove(multipleKeyWords.size()-1);
         FileReader fr = null;
         String line;
         // open the file
@@ -34,7 +30,8 @@ public class AccessProperty {
 
         BufferedReader bfr = new BufferedReader(fr);
         // read the lines:
-
+        ArrayList<String> keyWordLine = new ArrayList<>();
+        ArrayList<String> nonKeyWordLine = new ArrayList<>();
         try {
             // next task is making the improvement and making the code cleaner
             while ((line = bfr.readLine()) != null) {
