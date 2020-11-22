@@ -22,7 +22,7 @@ public class AccessProperty {
         String line;
         // open the file
         try {
-            fr = new FileReader("C:/Users/Emir/OneDrive/Documents/NewOne/Related_Text/src/main/resources/TestDrive1");
+            fr = new FileReader("**ENTER THE PATH TO YOUR FILE**");
         } catch (FileNotFoundException e) {
             System.out.println("Can not open the file!");
             System.exit(404);
